@@ -1,2 +1,2 @@
 # JavaScriptApp
-JavaScript Application
+JavaScript Essentiala
