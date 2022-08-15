@@ -1,0 +1,17 @@
+/*
+const declaretion alone doesn't really protect your data from mutation.To ensure your data doesn't
+change but JS provides a function Object.freeze to prevent data mutation.Any attempt at changing 
+the object will rejected.
+*/
+
+let obj = {
+   name :"Ali",
+   Id : "123456789" 
+} ;
+Object.freeze(obj) ;
+obj.name = "Can" ;
+obj.Id = "00000000" ;
+console.log(obj) ;
+/* assigments will result in errors.Because, our editor runs in strict mode by default, and the console
+will display {name : "Ali",Id : "123456789" }
+*/
