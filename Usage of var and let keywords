@@ -1,0 +1,55 @@
+/*
+Compare Scopes of the var and let Keywords 
+A variable with the var keyword, it is declared globally, or locally if declared inside a function.
+
+let keyword is like var but with some features.When we declare a variable with the let keyword inside 
+a block, statement, or expression its scope is limited to that field. 
+*/
+var numArray = [] ;
+for(var i=0;i<3;i++) 
+    numArray.push(i) ;
+    
+console.log(numArray) ;// will dislay [0,1,2]
+console.log(i) ;  // will display 3
+
+// With the var keyword, i is declared globally. So when i++ is executed , it updates the global variable 
+// Or 
+
+var numArray = [] ;
+var i ;
+for(i=0;i<3;i++) 
+    numArray.push(i) ;
+
+console.log(numArray) ; // it will again display [0,1,2]
+console.log(i) ; // will display 3 -same reason-
+
+//But 
+var printNumTwo ;
+for(var i=0;i<3;i++) {
+    if(i===2) {
+     printNumTwo = function() {
+        return i ;
+     };
+    }
+}
+console.log(printNumTwo()) ; // the console will display the value 3 .
+/*
+This is because the value assigned to i was update and the printNumTwo() retuns the global i 
+not the value i had when the function was crested in the for loop.
+*/
+
+//-------------------------- using let keyword------------------ 
+let printNumTwo ;
+for(let i=0;i<3;i++) {
+    if(i===2) {
+      printNumTwo = function() {
+      return i;
+      };
+    }
+}
+console.log(printNumTwo()) ;
+console.log(i) ;
+/*
+Here the console will display  2 and an error will occur that i is not defined.Since i was defined 
+locally
+*/
