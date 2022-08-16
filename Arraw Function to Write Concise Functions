@@ -1,0 +1,24 @@
+//----------------------------------------------------
+const myFunc = function() {
+ const  myVal = "value" ;
+ return myVal ; 
+}
+// ES6 provides us a syntactic sugar to not have to write anonymous functions this way.
+// ----------------------------------------------------
+const myFunc = () => {
+   const myVal = "value" ;
+   return myVal ;
+}
+// ------------------ OR-------------------------------  
+
+const myFunc = () => "value" ; 
+
+// --------------------------------------------------
+const doubler = (item) => item*2 ;
+
+doubler(4)  ; // will return 8 
+
+// -------------------------------------------------
+const multiplier = (item1,item2) => item1*item2 ;
+multiplier(4,2) ; // will return 8 
+
