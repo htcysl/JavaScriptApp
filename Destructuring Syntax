@@ -1,0 +1,22 @@
+const user = { name: 'Ali Can', age: 25 };
+
+const name = user.name;
+const age = user.age; //name would have a value of the string Ali Can, and age would have the number 25.
+
+
+//Here's an equivalent assignment statement using the ES6 destructuring syntax:
+const { name, age } = user;
+//Again,the same result 
+
+//------------------------Nested Object--------------------------------
+const user = {
+  Ali : {
+      age : 25 ,
+      email : 'ali@gmail.com'
+  }
+} ;
+// Here is the same thing 
+const {Ali : {age,email}} =  user ;
+
+// and can be assign an object properties' values to variables with different names :
+const { Ali : { age: userAge, email:userEmail }} = user ;
