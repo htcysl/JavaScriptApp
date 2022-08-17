@@ -1,0 +1,23 @@
+const [a,b] = [1,2,3,4,5,6] ;
+console.log(a,b) ; // will display the values of  a ad b as 1, 2 
+
+const [a,b,,,c] = [1,2,3,4,5,6] ;
+console.log(a,b,c)  ; // The console will display of a, b, and c as 1,2, 5 
+
+// The rest parameter 
+const [a,b,...arr] = [1,2,3,4,5,7] ;
+console.log(a,b) ; // Variables a and b take the first and second values from the array.
+console.log(arr) ; // arr will be [3,4,5,7] 
+
+// ---- Use destructuring assignment to pass an Object as a Function's parameters ----
+const profileUpdate = (profileData) => {
+    const {name, age , nationality, location } = profileData ;
+}
+/*
+The effectively destructures the object sent into the function. This can also be done in-place : 
+*/
+
+const profileUpdata = ({ name, age, nationality, location}) => { } 
+/*
+When profileData is passed to the above function, the values are destructured from the function parameter for use within the function.
+*/
